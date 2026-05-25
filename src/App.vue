@@ -4,9 +4,8 @@
 
       <!-- HEADER -->
       <header class="sticky top-4 z-50 w-full max-w-[1256px] backdrop-blur-[15px] bg-white/90 flex items-center justify-between overflow-hidden px-5 py-4 rounded-3xl shadow-sm">
-        <a href="/" class="flex items-center gap-1 shrink-0">
-          <img :src="assets.logoO" alt="O" class="h-[22px] w-[18px]" />
-          <img :src="assets.logo" alt="rangedata" class="h-[22px] w-[112px]" />
+        <a href="/" class="shrink-0">
+          <img :src="assets.logo" alt="orangedata" class="h-[22px] w-[130px]" />
         </a>
         <div class="flex gap-4 items-center">
           <span class="font-semibold text-[16px] text-black whitespace-nowrap">+7 (495) 445-90-51</span>
@@ -284,9 +283,8 @@
       <!-- FOOTER -->
       <footer class="w-full max-w-[1256px] bg-white border border-white rounded-tl-3xl rounded-tr-3xl px-8 pt-8 pb-0">
         <div class="flex items-start justify-between pb-4">
-          <a href="/" class="flex items-center gap-1 shrink-0">
-            <img :src="assets.logoO" alt="O" class="h-[22px] w-[18px]" />
-            <img :src="assets.logo" alt="rangedata" class="h-[22px] w-[112px]" />
+          <a href="/" class="shrink-0">
+            <img :src="assets.logo" alt="orangedata" class="h-[22px] w-[130px]" />
           </a>
           <div class="flex gap-2 items-center">
             <div class="bg-[#f1f5f9] p-2 rounded-full">
@@ -320,8 +318,7 @@ import { ref } from 'vue'
 const BASE = import.meta.env.BASE_URL + 'assets'
 
 const assets = {
-  logo:          `${BASE}/59c57e876735e22c741e6bd213c1aca2eb404cb1.svg`,
-  logoO:         `${BASE}/ecaaa9ea0e11a2f6ef1713eaba24ff518154b7e4.svg`,
+  logo:          `${BASE}/orangelogo.svg`,
   heroBg:        `${BASE}/a1d428284cd705a0b94fe0519ff1236c1dacdace.png`,
   stat1Bg:       `${BASE}/2fd7a312420f259e1d7f49a145432d8ba1fa9f73.png`,
   stat2Bg:       `${BASE}/001023813554b585ae32d0350927434765b11e83.png`,
