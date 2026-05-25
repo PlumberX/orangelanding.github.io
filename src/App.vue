@@ -54,36 +54,36 @@
         <!-- STATS BENTO -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-[10px]">
           <!-- 20 000+ -->
-          <div class="bg-white rounded-[36px] p-10 overflow-hidden relative h-[375px] flex flex-col justify-end">
+          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[220px] md:h-[375px] flex flex-col justify-end">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
               <img :src="assets.stat1Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
             </div>
             <div class="relative z-10">
-              <div class="text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">20 000+</div>
-              <div class="text-[20px] font-normal text-black leading-[1.4] mt-1">Клиентов по всей России</div>
+              <div class="text-[40px] md:text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">20 000+</div>
+              <div class="text-[16px] md:text-[20px] font-normal text-black leading-[1.4] mt-1">Клиентов по всей России</div>
             </div>
           </div>
           <!-- 10 лет -->
-          <div class="bg-white rounded-[36px] p-10 overflow-hidden relative h-[375px] flex flex-col justify-start">
+          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[220px] md:h-[375px] flex flex-col justify-start">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
               <img :src="assets.stat2Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
             </div>
             <div class="relative z-10">
-              <div class="text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">10 лет</div>
-              <div class="text-[20px] font-normal text-black leading-[1.4] mt-1">На рынке облачной<br/>фискализации</div>
+              <div class="text-[40px] md:text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">10 лет</div>
+              <div class="text-[16px] md:text-[20px] font-normal text-black leading-[1.4] mt-1">На рынке облачной<br/>фискализации</div>
             </div>
             <div class="absolute top-16 right-8 flex flex-col gap-3 pointer-events-none">
               <span v-for="d in [20,13,20,14]" :key="d+'_2'" class="bg-[#7979ef] rounded-full shadow-md block" :style="{width:d+'px',height:d+'px'}" />
             </div>
           </div>
           <!-- 25 млн. -->
-          <div class="bg-white rounded-[36px] p-10 overflow-hidden relative h-[375px] flex flex-col justify-center">
+          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[220px] md:h-[375px] flex flex-col justify-center">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
               <img :src="assets.stat3Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
             </div>
             <div class="relative z-10">
-              <div class="text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">25 млн.</div>
-              <div class="text-[20px] font-normal text-black leading-[1.4] mt-1">Транзакций в сутки</div>
+              <div class="text-[40px] md:text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">25 млн.</div>
+              <div class="text-[16px] md:text-[20px] font-normal text-black leading-[1.4] mt-1">Транзакций в сутки</div>
             </div>
           </div>
         </div>
