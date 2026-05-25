@@ -25,7 +25,7 @@
 
         <!-- HERO -->
         <section
-          class="relative flex flex-col gap-10 justify-center overflow-hidden p-10 rounded-[36px] min-h-[462px]"
+          class="relative flex flex-col gap-6 md:gap-10 justify-center overflow-hidden p-6 md:p-10 rounded-[36px] min-h-[320px] md:min-h-[462px]"
           :style="heroStyle"
         >
           <!-- Hero background image -->
@@ -33,10 +33,10 @@
             <img :src="assets.heroBg" alt="" class="absolute right-0 top-0 h-full w-auto object-cover" />
           </div>
           <div class="relative z-10 flex flex-col gap-3 text-white max-w-[660px]">
-            <h1 class="text-[48px] font-semibold leading-[1.1] tracking-[-1.5px]">
+            <h1 class="text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-1.5px]">
               Облачные кассы для любого бизнеса
             </h1>
-            <p class="text-[24px] font-normal leading-[1.4]">
+            <p class="text-[16px] md:text-[24px] font-normal leading-[1.4]">
               Поможем вашему бизнесу пробивать чеки быстро и без лишних сложностей
             </p>
           </div>
