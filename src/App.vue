@@ -317,7 +317,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const BASE = '/assets'
+const BASE = import.meta.env.BASE_URL + 'assets'
 
 const assets = {
   logo:          `${BASE}/59c57e876735e22c741e6bd213c1aca2eb404cb1.svg`,
