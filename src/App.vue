@@ -52,7 +52,7 @@
         </section>
 
         <!-- STATS BENTO -->
-        <div class="grid grid-cols-3 gap-[10px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[10px]">
           <!-- 20 000+ -->
           <div class="bg-white rounded-[36px] p-10 overflow-hidden relative h-[375px] flex flex-col justify-end">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
