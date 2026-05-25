@@ -54,7 +54,7 @@
         <!-- STATS BENTO -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-[10px]">
           <!-- 20 000+ -->
-          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[220px] md:h-[375px] flex flex-col justify-end">
+          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[160px] md:h-[375px] flex flex-col justify-end">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
               <img :src="assets.stat1Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
             </div>
@@ -64,7 +64,7 @@
             </div>
           </div>
           <!-- 10 лет -->
-          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[220px] md:h-[375px] flex flex-col justify-start">
+          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[160px] md:h-[375px] flex flex-col justify-start">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
               <img :src="assets.stat2Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
             </div>
@@ -77,7 +77,7 @@
             </div>
           </div>
           <!-- 25 млн. -->
-          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[220px] md:h-[375px] flex flex-col justify-center">
+          <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[160px] md:h-[375px] flex flex-col justify-center">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
               <img :src="assets.stat3Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
             </div>
