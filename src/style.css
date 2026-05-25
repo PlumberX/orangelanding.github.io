@@ -3,3 +3,26 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body, #app { height: 100%; margin: 0; }
 body { -webkit-font-smoothing: antialiased; }
+
+/* Оверлей — blur + затемнение */
+.modal-overlay {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: backdrop-filter 0.35s ease, background-color 0.35s ease;
+}
+.modal-enter-from .modal-overlay,
+.modal-leave-to .modal-overlay {
+  backdrop-filter: blur(0px);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Карточка — scale + opacity */
+.modal-enter-active .modal-card,
+.modal-leave-active .modal-card {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.modal-enter-from .modal-card,
+.modal-leave-to .modal-card {
+  transform: scale(0.95);
+  opacity: 0;
+}

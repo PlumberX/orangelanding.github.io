@@ -40,12 +40,12 @@
               Поможем вашему бизнесу пробивать чеки быстро и без лишних сложностей
             </p>
           </div>
-          <div class="relative z-10 flex gap-4 items-center">
-            <button class="flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-12 rounded-2xl hover:bg-[#e8680a] transition-colors">
+          <div class="relative z-10 flex flex-col md:flex-row gap-3 md:gap-4 md:items-center">
+            <button class="flex items-center justify-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-12 rounded-2xl hover:bg-[#e8680a] transition-colors w-full md:w-auto">
               <img :src="assets.iconBuy" alt="" class="w-6 h-6" />
               Купить
             </button>
-            <button class="flex items-center gap-2 bg-[#f1f5f9] text-[#1e293b] text-[16px] font-medium px-4 h-12 rounded-2xl hover:bg-[#e2e8f0] transition-colors">
+            <button @click="openModal" class="flex items-center justify-center gap-2 bg-[#f1f5f9] text-[#1e293b] text-[16px] font-medium px-4 h-12 rounded-2xl hover:bg-[#e2e8f0] transition-colors w-full md:w-auto">
               Задать вопрос
             </button>
           </div>
@@ -309,11 +309,75 @@
       </footer>
 
     </div>
+
+    <!-- MODAL -->
+    <Transition name="modal" :duration="350">
+      <div
+        v-if="showModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4"
+        @click.self="showModal = false"
+      >
+        <!-- Overlay -->
+        <div class="modal-overlay absolute inset-0" @click="showModal = false" />
+
+        <!-- Card -->
+        <div class="modal-card relative bg-white border border-[#dde8f4] rounded-[24px] shadow-lg p-6 w-full max-w-[465px] flex flex-col gap-[10px]">
+          <!-- Header -->
+          <div class="flex gap-[10px] items-start justify-between">
+            <div class="flex flex-col gap-1">
+              <p class="text-[24px] font-semibold text-[#020617] leading-[1.2] tracking-[-1px]">Оставьте заявку</p>
+              <p class="text-[16px] font-normal text-[#020617] leading-[1.5]">Мы свяжемся с вами в ближайшее время</p>
+            </div>
+            <button @click="showModal = false" class="shrink-0 w-6 h-6 flex items-center justify-center hover:opacity-60 transition-opacity">
+              <img :src="assets.iconClose" alt="Закрыть" class="w-[14px] h-[14px]" />
+            </button>
+          </div>
+
+          <!-- Fields -->
+          <div class="flex flex-col gap-4">
+            <input
+              v-model="modalName"
+              type="text"
+              placeholder="Ваше имя"
+              class="w-full h-[44px] px-3 border border-[#e2e8f0] rounded-[10px] text-[14px] text-[#020617] placeholder-[#64748b] outline-none focus:border-[#7979ef] transition-colors"
+            />
+            <input
+              v-model="modalPhone"
+              type="tel"
+              placeholder="Номер телефона"
+              class="w-full h-[44px] px-3 border border-[#e2e8f0] rounded-[10px] text-[14px] text-[#020617] placeholder-[#64748b] outline-none focus:border-[#7979ef] transition-colors"
+            />
+            <button
+              @click="submitModal"
+              class="w-full h-[44px] bg-[#fa7415] text-white text-[16px] font-normal rounded-[16px] hover:bg-[#e8680a] transition-colors"
+            >
+              Оставить заявку
+            </button>
+          </div>
+        </div>
+      </div>
+    </Transition>
+
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
+const showModal = ref(false)
+const modalName = ref('')
+const modalPhone = ref('')
+
+function openModal() {
+  showModal.value = true
+}
+
+function submitModal() {
+  // TODO: send form
+  showModal.value = false
+  modalName.value = ''
+  modalPhone.value = ''
+}
 
 const BASE = import.meta.env.BASE_URL + 'assets'
 
