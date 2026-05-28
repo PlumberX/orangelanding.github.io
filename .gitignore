@@ -17,6 +17,10 @@ deploy_key.pub
 .DS_Store
 Thumbs.db
 
+# TS build artifacts
+*.tsbuildinfo
+vite.config.js
+
 # Editor
 .vscode/
 .idea/

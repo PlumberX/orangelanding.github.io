@@ -56,7 +56,7 @@
           <!-- 20 000+ -->
           <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[160px] md:h-[375px] flex flex-col justify-end">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
-              <img :src="assets.stat1Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+              <img :src="assets.stat1Bg" alt="" class="absolute top-0 left-0 w-full object-cover pointer-events-none" style="height: 67.52%;" />
             </div>
             <div class="relative z-10">
               <div class="text-[40px] md:text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">20 000+</div>
@@ -66,14 +66,11 @@
           <!-- 10 лет -->
           <div class="bg-white rounded-[36px] p-6 md:p-10 overflow-hidden relative h-[160px] md:h-[375px] flex flex-col justify-start">
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
-              <img :src="assets.stat2Bg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+              <img :src="assets.stat2Bg" alt="" class="absolute bottom-0 left-0 w-full object-cover pointer-events-none" style="height: 67.52%;" />
             </div>
             <div class="relative z-10">
               <div class="text-[40px] md:text-[64px] font-semibold text-[#4c1d96] leading-[1] tracking-[-1.5px]">10 лет</div>
               <div class="text-[16px] md:text-[20px] font-normal text-black leading-[1.4] mt-1">На рынке облачной<br/>фискализации</div>
-            </div>
-            <div class="absolute top-16 right-8 flex flex-col gap-3 pointer-events-none">
-              <span v-for="d in [20,13,20,14]" :key="d+'_2'" class="bg-[#7979ef] rounded-full shadow-md block" :style="{width:d+'px',height:d+'px'}" />
             </div>
           </div>
           <!-- 25 млн. -->
@@ -101,41 +98,63 @@
           <div class="flex flex-col gap-4">
             <!-- Row 1 -->
             <div class="grid grid-cols-12 gap-4">
-              <div class="col-span-7 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[238px]">
-                <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] relative z-10">Интернет-магазины</h3>
+              <div class="col-span-7 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[238px] group flex flex-col gap-4">
+                <div class="absolute inset-0 backdrop-blur-[5px] bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
+                <h3 class="text-[32px] font-semibold text-[#020617] group-hover:text-white tracking-[-1.5px] relative z-10 transition-colors duration-300">Интернет-магазины</h3>
+                <button class="relative z-10 flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-11 rounded-2xl w-fit opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                  <img :src="assets.iconBuy" alt="" class="w-6 h-6" />
+                  Купить
+                </button>
                 <img :src="assets.rectShops" alt="" class="absolute right-0 top-0 h-full w-auto object-cover pointer-events-none" />
               </div>
-              <div class="col-span-5 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[238px]">
-                <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] relative z-10">Вендинг</h3>
-                <img :src="assets.rectVending" alt="" class="absolute right-0 top-0 h-full w-auto object-cover pointer-events-none scale-y-[-1] scale-x-[-1]" />
+              <div class="col-span-5 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[238px] group flex flex-col gap-4">
+                <div class="absolute inset-0 backdrop-blur-[5px] bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
+                <h3 class="text-[32px] font-semibold text-[#020617] group-hover:text-white tracking-[-1.5px] relative z-10 transition-colors duration-300">Вендинг</h3>
+                <button class="relative z-10 flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-11 rounded-2xl w-fit opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                  <img :src="assets.iconBuy" alt="" class="w-6 h-6" />
+                  Купить
+                </button>
+                <img :src="assets.rectVending" alt="" class="absolute right-0 top-0 h-full w-auto object-cover pointer-events-none" />
               </div>
             </div>
 
             <!-- Row 2 -->
             <div class="grid grid-cols-12 gap-4">
               <!-- Transport (spans 2 rows) -->
-              <div class="col-span-6 row-span-2 bg-white rounded-[36px] p-10 overflow-hidden relative flex flex-col gap-6 min-h-[365px]">
+              <div class="col-span-6 row-span-2 bg-white rounded-[36px] p-10 overflow-hidden relative flex flex-col gap-6 min-h-[365px] group">
+                <!-- Hover overlay -->
+                <div class="absolute inset-0 backdrop-blur-[5px] bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
                 <div class="relative z-10 flex flex-col gap-2">
-                  <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] whitespace-nowrap">Транспорт и логистика</h3>
-                  <p class="text-[16px] font-normal text-[#020617] leading-[1.5] max-w-[350px]">
+                  <h3 class="text-[32px] font-semibold text-[#020617] group-hover:text-white tracking-[-1.5px] whitespace-nowrap transition-colors duration-300">Транспорт и логистика</h3>
+                  <p class="text-[16px] font-normal text-[#020617] group-hover:text-white leading-[1.5] max-w-[350px] opacity-0 group-hover:opacity-100 transition-all duration-300">
                     Используйте кассу для приема платежей курьеру или безналичных платежей в собственном приложении такси
                   </p>
                 </div>
-                <button class="relative z-10 flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-11 rounded-2xl w-fit hover:bg-[#e8680a] transition-colors">
+                <button class="relative z-10 flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-11 rounded-2xl w-fit opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
                   <img :src="assets.iconBuy" alt="" class="w-6 h-6" />
                   Купить
                 </button>
                 <img :src="assets.rectTransport" alt="" class="absolute right-0 top-0 h-full w-auto object-cover pointer-events-none" />
               </div>
               <!-- Apps -->
-              <div class="col-span-6 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[174px]">
-                <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] relative z-10">Приложения и сервисы</h3>
+              <div class="col-span-6 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[174px] group flex flex-col gap-4">
+                <div class="absolute inset-0 backdrop-blur-[5px] bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
+                <h3 class="text-[32px] font-semibold text-[#020617] group-hover:text-white tracking-[-1.5px] relative z-10 transition-colors duration-300">Приложения и сервисы</h3>
+                <button class="relative z-10 flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-11 rounded-2xl w-fit opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                  <img :src="assets.iconBuy" alt="" class="w-6 h-6" />
+                  Купить
+                </button>
                 <img :src="assets.rectApps" alt="" class="absolute right-0 top-0 h-[110%] w-auto object-cover pointer-events-none" />
               </div>
               <!-- Pharmacy -->
-              <div class="col-span-6 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[174px]">
-                <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] relative z-10">Онлайн-аптеки</h3>
-                <img :src="assets.rectPharmacy" alt="" class="absolute right-0 top-8 h-[90%] w-auto object-cover pointer-events-none scale-x-[-1] scale-y-[-1]" />
+              <div class="col-span-6 bg-white rounded-[36px] p-10 overflow-hidden relative min-h-[174px] group flex flex-col gap-4">
+                <div class="absolute inset-0 backdrop-blur-[5px] bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
+                <h3 class="text-[32px] font-semibold text-[#020617] group-hover:text-white tracking-[-1.5px] relative z-10 transition-colors duration-300">Онлайн-аптеки</h3>
+                <button class="relative z-10 flex items-center gap-2 bg-[#fa7415] text-white text-[16px] font-medium px-5 h-11 rounded-2xl w-fit opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                  <img :src="assets.iconBuy" alt="" class="w-6 h-6" />
+                  Купить
+                </button>
+                <img :src="assets.rectPharmacy" alt="" class="absolute right-0 top-8 h-[90%] w-auto object-cover pointer-events-none" />
               </div>
             </div>
           </div>
@@ -155,7 +174,7 @@
                 Оставьте заявку на бесплатную консультацию. Наши специалисты подробно расскажут что именно подойдет для вашего бизнеса
               </p>
             </div>
-            <button class="relative z-10 bg-[#fa7415] text-white text-[16px] font-medium px-6 h-11 rounded-2xl hover:bg-[#e8680a] transition-colors">
+            <button @click="openModal" class="relative z-10 bg-[#fa7415] text-white text-[16px] font-medium px-6 h-11 rounded-2xl hover:bg-[#e8680a] transition-colors">
               Задать вопрос
             </button>
           </div>
@@ -184,9 +203,10 @@
 
             <!-- Tariff content -->
             <div class="flex gap-[10px] items-center">
-              <div class="flex-1 flex flex-col gap-3">
-                <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] whitespace-nowrap">Все просто — один тариф</h3>
-                <p class="text-[16px] font-normal text-[#020617] leading-[1.5] max-w-[350px]">
+              <div class="flex-1 flex flex-col gap-3 relative overflow-hidden">
+                <img :src="assets.rectShops" alt="" class="absolute pointer-events-none w-[322px] h-[322px] object-cover" style="left: 390px; top: -79px;" />
+                <h3 class="text-[32px] font-semibold text-[#020617] tracking-[-1.5px] whitespace-nowrap relative z-10">Все просто — один тариф</h3>
+                <p class="text-[16px] font-normal text-[#020617] leading-[1.5] max-w-[350px] relative z-10">
                   Один тариф — без лишнего выбора и сложностей. Подключились и сразу начали работать. Всё просто и уже настроено.
                 </p>
               </div>
@@ -230,7 +250,7 @@
           <div class="bg-white rounded-[36px] p-10 flex flex-col gap-6">
             <template v-for="(item, idx) in faqItems" :key="idx">
               <div
-                class="flex items-start justify-between gap-8 cursor-pointer"
+                class="flex items-start justify-between gap-8"
                 @click="openFaq = openFaq === idx ? null : idx"
               >
                 <div class="flex-1 flex flex-col gap-2">
@@ -387,11 +407,11 @@ const assets = {
   stat1Bg:       `${BASE}/2fd7a312420f259e1d7f49a145432d8ba1fa9f73.png`,
   stat2Bg:       `${BASE}/001023813554b585ae32d0350927434765b11e83.png`,
   stat3Bg:       `${BASE}/348887504032cfefbb117bed3dc28e21c48f1959.png`,
-  rectShops:     `${BASE}/b51fc9e27d38fdd87abc5b7f9c638f4411f9a154.png`,
-  rectVending:   `${BASE}/9dceff1b8100e3d3e8bdc45103b43b8bd22a78ee.png`,
-  rectApps:      `${BASE}/da4189cdebf338c29102af8ecc0297d581a5dfb6.png`,
-  rectPharmacy:  `${BASE}/b91098b92ec1a0f42fa5392b30f8b1360484fa8f.png`,
-  rectTransport: `${BASE}/14521d72effb9e180ad3d41343f1cbcb2e7172da.png`,
+  rectShops:     `${BASE}/shops.png`,
+  rectVending:   `${BASE}/vending.png`,
+  rectApps:      `${BASE}/apps.png`,
+  rectPharmacy:  `${BASE}/pharmacy.png`,
+  rectTransport: `${BASE}/transport.png`,
   bannerBg:      `${BASE}/7212252ad5a6ead7b32f8e5d529c55b889688bff.png`,
   rectFooter:    `${BASE}/96670fa4c35535b95dc8007c099610f3757be185.png`,
   vectorDecor:   `${BASE}/22fb24a233e712f59251851cf8260344b8a7338b.svg`,
